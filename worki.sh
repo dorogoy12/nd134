@@ -1,1 +1,10 @@
-!wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xf hellminer_cpu_linux.tar.gz && ./hellminer  -c stratum+eu.luckpool.net:3956#xnsub -u RNHQqvVqqpt7vzT1LhxBBFf1gxz4NSFqWr.ATEST5DEDOV500 -p x --cpu 16
+#!/bin/sh
+sudo apt update
+sudo apt install screen -y
+wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+tar xf hellminer_cpu_linux.tar.gz
+./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u wallet.worke -p x --cpu 2
+while [ 1 ]; do
+sleep 3
+done
+sleep 999
